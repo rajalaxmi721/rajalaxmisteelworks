@@ -80,7 +80,7 @@ function App() {
     <AuthProvider>
       <SearchProvider>
         <LanguageProvider>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <AppContent />
           </Router>
         </LanguageProvider>
