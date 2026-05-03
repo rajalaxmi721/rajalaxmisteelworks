@@ -25,7 +25,10 @@ const Home = () => {
   const marqueeProducts = useMemo(() => {
     // Select specific distinct IDs to represent the best of the portfolio
     const selectedIds = [2, 3, 6, 50, 4, 5, 8, 10]; 
-    const selected = mockProducts.filter(p => selectedIds.includes(p.id));
+    const selected = mockProducts.filter(p => selectedIds.includes(p.id)).map(p => ({
+      ...p,
+      image: p.image.startsWith('http') ? p.image : process.env.PUBLIC_URL + p.image
+    }));
     
     // Shuffle the selected items
     const shuffled = [...selected];
@@ -39,7 +42,10 @@ const Home = () => {
   }, []);
 
   const processedProducts = useMemo(() => {
-    let filtered = [...mockProducts];
+    let filtered = mockProducts.map(p => ({
+      ...p,
+      image: p.image.startsWith('http') ? p.image : process.env.PUBLIC_URL + p.image
+    }));
     
     // 1. Category Filter
     if (selectedCategory !== 'All Works & Welding Works') {
@@ -104,7 +110,10 @@ const Home = () => {
       suggestions = [...suggestions, ...moreSuggestions];
     }
     
-    return suggestions.slice(0, 3);
+    return suggestions.map(p => ({
+      ...p,
+      image: p.image.startsWith('http') ? p.image : process.env.PUBLIC_URL + p.image
+    })).slice(0, 3);
   };
 
   return (
