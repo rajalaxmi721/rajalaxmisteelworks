@@ -6,7 +6,7 @@ export const translations = {
     nav_call: "Call Now",
     nav_search: "Search services...",
     
-    hero_title: "Rajalaxmi Steel works & 3D Printing",
+    hero_title: "Rajlaxmi Metal works & 3D Printing",
     hero_subtitle: "Precision Engineering Meets Modern 3D Technology",
     hero_learn_more: "Learn More",
     hero_our_services: "Our Services",
@@ -48,7 +48,7 @@ export const translations = {
     about_innovation_desc: "Integrating 3D printing for customized intricate designs.",
     about_customer: "Customer Focused",
     about_customer_desc: "Tailored solutions for residential, commercial, and industrial needs.",
-    about_desc: "With over two decades of excellence in metal fabrication, Rajalaxmi Steel Works and Services has established itself as a leader in precision welding and structural engineering. We combine traditional craftsmanship with state-of-the-art 3D printing solutions to deliver products that are not only durable but also architecturally stunning.",
+    about_desc: "With over two decades of excellence in metal fabrication, Rajlaxmi Metal Works and Services has established itself as a leader in precision welding and structural engineering. We combine traditional craftsmanship with state-of-the-art 3D printing solutions to deliver products that are not only durable but also architecturally stunning.",
     
     contact_visit: "Visit Our Workshop",
     contact_quote_part1: "Get A Free",
@@ -62,7 +62,7 @@ export const translations = {
     footer_help: "Help",
     footer_policy: "Policy",
     footer_social: "Social",
-    footer_rights: "© 2026 Rajalaxmi Steel works & 3D Printing Solutions. All Rights Reserved."
+    footer_rights: "© 2026 Rajlaxmi Metal Works & 3D Printing Solutions. All Rights Reserved."
   },
   kn: {
     nav_services: "ಸೇವೆಗಳು",
@@ -71,7 +71,7 @@ export const translations = {
     nav_call: "ಈಗ ಕರೆ ಮಾಡಿ",
     nav_search: "ಸೇವೆಗಳನ್ನು ಹುಡುಕಿ...",
     
-    hero_title: "ರಾಜಲಕ್ಷ್ಮಿ ಸ್ಟೀಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು 3D ಪ್ರಿಂಟಿಂಗ್",
+    hero_title: "ರಾಜಲಕ್ಷ್ಮಿ ಮೆಟಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು 3D ಪ್ರಿಂಟಿಂಗ್",
     hero_subtitle: "ನಿಖರ ಎಂಜಿನಿಯರಿಂಗ್ ಆಧುನಿಕ 3D ತಂತ್ರಜ್ಞಾನವನ್ನು ಭೇಟಿ ಮಾಡುತ್ತದೆ",
     hero_learn_more: "ಹೆಚ್ಚು ತಿಳಿಯಿರಿ",
     hero_our_services: "ನಮ್ಮ ಸೇವೆಗಳು",
@@ -113,7 +113,7 @@ export const translations = {
     about_innovation_desc: "ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ಸಂಕೀರ್ಣ ವಿನ್ಯಾಸಗಳಿಗಾಗಿ 3D ಪ್ರಿಂಟಿಂಗ್ ಅನ್ನು ಸಂಯೋಜಿಸುವುದು.",
     about_customer: "ಗ್ರಾಹಕ ಕೇಂದ್ರಿತ",
     about_customer_desc: "ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಕೈಗಾರಿಕಾ ಅಗತ್ಯಗಳಿಗಾಗಿ ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ಪರಿಹಾರಗಳು.",
-    about_desc: "ಲೋಹದ ಫ್ಯಾಬ್ರಿಕೇಶನ್‌ನಲ್ಲಿ ಎರಡು ದಶಕಗಳಿಗೂ ಹೆಚ್ಚು ಶ್ರೇಷ್ಠತೆಯೊಂದಿಗೆ, ರಾಜಲಕ್ಷ್ಮಿ ಸ್ಟೀಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು ಸರ್ವಿಸಸ್ ನಿಖರವಾದ ವೆಲ್ಡಿಂಗ್ ಮತ್ತು ಸ್ಟ್ರಕ್ಚರಲ್ ಎಂಜಿನಿಯರಿಂಗ್‌ನಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿದೆ. ಬಾಳಿಕೆ ಬರುವ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪದ ಅದ್ಭುತ ಉತ್ಪನ್ನಗಳನ್ನು ನೀಡಲು ನಾವು ಸಾಂಪ್ರದಾಯಿಕ ಕರಕುಶಲತೆಯನ್ನು ಅತ್ಯಾಧುನಿಕ 3D ಪ್ರಿಂಟಿಂಗ್ ಪರಿಹಾರಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತೇವೆ.",
+    about_desc: "ಲೋಹದ ಫ್ಯಾಬ್ರಿಕೇಶನ್‌ನಲ್ಲಿ ಎರಡು ದಶಕಗಳಿಗೂ ಹೆಚ್ಚು ಶ್ರೇಷ್ಠತೆಯೊಂದಿಗೆ, ರಾಜಲಕ್ಷ್ಮಿ ಮೆಟಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು ಸರ್ವಿಸಸ್ ನಿಖರವಾದ ವೆಲ್ಡಿಂಗ್ ಮತ್ತು ಸ್ಟ್ರಕ್ಚರಲ್ ಎಂಜಿನಿಯರಿಂಗ್‌ನಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿದೆ. ಬಾಳಿಕೆ ಬರುವ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪದ ಅದ್ಭುತ ಉತ್ಪನ್ನಗಳನ್ನು ನೀಡಲು ನಾವು ಸಾಂಪ್ರದಾಯಿಕ ಕರಕುಶಲತೆಯನ್ನು ಅತ್ಯಾಧುನಿಕ 3D ಪ್ರಿಂಟಿಂಗ್ ಪರಿಹಾರಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತೇವೆ.",
     
     contact_visit: "ನಮ್ಮ ಕಾರ್ಯಾಗಾರಕ್ಕೆ ಭೇಟಿ ನೀಡಿ",
     contact_quote_part1: "ಪಡೆಯಿರಿ ಉಚಿತ",
@@ -127,6 +127,6 @@ export const translations = {
     footer_help: "ಸಹಾಯ",
     footer_policy: "ನೀತಿ",
     footer_social: "ಸಾಮಾಜಿಕ",
-    footer_rights: "© 2026 ರಾಜಲಕ್ಷ್ಮಿ ಸ್ಟೀಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು 3D ಪ್ರಿಂಟಿಂಗ್ ಸೊಲ್ಯೂಷನ್ಸ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+    footer_rights: "© 2026 ರಾಜಲಕ್ಷ್ಮಿ ಮೆಟಲ್ ವರ್ಕ್ಸ್ ಮತ್ತು 3D ಪ್ರಿಂಟಿಂಗ್ ಸೊಲ್ಯೂಷನ್ಸ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
   }
 };

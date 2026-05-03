@@ -142,9 +142,9 @@ const Navbar = () => {
         <div className="py-3 flex items-center justify-between gap-4 md:gap-8">
           {/* Logo */}
           <Link to="/" className="flex flex-col items-start leading-tight min-w-fit" onClick={() => setIsMobileMenuOpen(false)}>
-            <span className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">Rajalaxmi</span>
+            <span className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">Rajlaxmi</span>
             <span className="text-[8px] md:text-[10px] text-blue-100 italic flex items-center font-bold">
-              STEEL WORKS & 3D PRINTING <span className="ml-1 text-yellow-400">★</span>
+              RAJLAXMI METAL WORKS & 3D PRINTING <span className="ml-1 text-yellow-400">★</span>
             </span>
           </Link>
 

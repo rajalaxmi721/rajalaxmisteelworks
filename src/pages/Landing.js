@@ -11,7 +11,7 @@ const Landing = () => {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center bg-transparent relative z-10">
         <div className="flex items-center gap-3">
           <img src="/assets/logo.png" alt="Logo" className="w-12 h-12 object-contain" />
-          <span className="text-2xl font-black text-blue-900 tracking-tighter uppercase italic">Rajalaxmi</span>
+          <span className="text-2xl font-black text-blue-900 tracking-tighter uppercase italic">Rajlaxmi</span>
         </div>
         <div className="hidden md:flex gap-8 items-center text-blue-900 font-bold text-sm uppercase">
           <a href="#about" className="hover:text-blue-600 transition-colors">About Us</a>
@@ -49,10 +49,10 @@ const Landing = () => {
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 relative z-10">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-black text-blue-950 mb-6 leading-tight">
-              Precision <span className="text-blue-600">Steel Works</span> & Industrial Excellence
+              Precision <span className="text-blue-600">Metal Works</span> & Industrial Excellence
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
-              At Rajalaxmi Steel Works & Services, we specialize in high-grade welding, precision fabrication, and heavy-duty industrial equipment. Quality you can trust, durability you can see.
+              At Rajlaxmi Metal Works & Services, we specialize in high-grade welding, precision fabrication, and heavy-duty industrial equipment. Quality you can trust, durability you can see.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
@@ -87,9 +87,9 @@ const Landing = () => {
       <section id="about" className="py-24 bg-white border-y border-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-blue-950 mb-4">About Rajalaxmi Steel Works</h2>
+            <h2 className="text-4xl font-bold text-blue-950 mb-4">About Rajlaxmi Metal Works</h2>
             <p className="text-slate-500 text-lg">
-              Since our inception, Rajalaxmi Steel Works & Services has been at the forefront of the steel industry. We don't just weld; we build the future with strength and precision. Our workshop is equipped with the latest technology to deliver custom solutions for every scale.
+              Since our inception, Rajlaxmi Metal Works & Services has been at the forefront of the steel industry. We don't just weld; we build the future with strength and precision. Our workshop is equipped with the latest technology to deliver custom solutions for every scale.
             </p>
           </div>
           
@@ -141,7 +141,7 @@ const Landing = () => {
                     </div>
                     <div>
                       <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Managing Director</p>
-                      <p className="text-xl font-bold text-slate-800">Mr. Rajalaxmi</p>
+                      <p className="text-xl font-bold text-slate-800">Mr. Rajlaxmi</p>
                     </div>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ const Landing = () => {
 
       {/* Footer */}
       <footer className="py-12 bg-blue-950 text-white text-center">
-        <p className="text-blue-200 text-sm">© 2026 Rajalaxmi Steel Works & Services. Building Strength for Tomorrow.</p>
+        <p className="text-blue-200 text-sm">© 2026 Rajlaxmi Metal Works & Services. Building Strength for Tomorrow.</p>
       </footer>
     </div>
   );

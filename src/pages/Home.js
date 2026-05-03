@@ -22,6 +22,35 @@ const Home = () => {
     setVisibleCount(8);
   }, [selectedCategory]);
 
+  // Handle product link from URL hash
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#product-')) {
+        const productId = parseInt(hash.replace('#product-', ''));
+        const product = mockProducts.find(p => p.id === productId);
+        if (product) {
+          setSelectedImage({
+            ...product,
+            image: product.image.startsWith('http') ? product.image : process.env.PUBLIC_URL + product.image
+          });
+          
+          // Smooth scroll to the product element if it exists
+          setTimeout(() => {
+            const element = document.getElementById(`product-${productId}`);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 500);
+        }
+      }
+    };
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
   const marqueeProducts = useMemo(() => {
     // Select specific distinct IDs to represent the best of the portfolio
     const selectedIds = [2, 3, 6, 50, 4, 5, 8, 10]; 
@@ -338,7 +367,7 @@ const Home = () => {
                     
                     <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
                       <a 
-                        href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajalaxmi Steel Works, I am interested in: ${visibleProducts[0].name}.\n\nProduct Link: ${window.location.origin}/#product-${visibleProducts[0].id}\n\nPlease provide more details.`)}`}
+                        href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${visibleProducts[0].name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${visibleProducts[0].id}\n\nPlease provide more details.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:from-white hover:to-white hover:text-green-600 hover:scale-105 transition-all shadow-[0_10px_20px_rgba(34,197,94,0.3)] active:scale-95 text-sm"
@@ -436,7 +465,7 @@ const Home = () => {
                         
                         <div className="mt-auto">
                           <a 
-                            href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajalaxmi Steel Works, I am interested in: ${product.name}.\n\nProduct Link: ${window.location.origin}/#product-${product.id}\n\nPlease provide more details.`)}`}
+                            href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${product.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${product.id}\n\nPlease provide more details.`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full bg-gradient-to-r from-blue-900 to-blue-800 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:from-yellow-400 hover:to-yellow-500 hover:text-blue-900 transition-all shadow-lg active:scale-95 hover:scale-[1.02]"
@@ -585,7 +614,7 @@ const Home = () => {
           {/* Right Side - Google Map */}
           <div className="lg:w-1/2 h-80 lg:h-auto min-h-[400px] relative bg-gray-800">
             <iframe 
-              title="Rajalaxmi Steel Works Location"
+              title="Rajlaxmi Metal Works Location"
               src="https://maps.google.com/maps?q=16.336995,74.9617633&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               className="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-pointer"
               allowFullScreen="" 
@@ -640,7 +669,7 @@ const Home = () => {
                     <span className="text-gray-400 text-xs font-semibold">({selectedImage.reviews} reviews)</span>
                  </div>
                  <a 
-                    href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajalaxmi Steel Works, I am interested in: ${selectedImage.name}.\n\nProduct Link: ${window.location.origin}/#product-${selectedImage.id}\n\nPlease provide more details.`)}`}
+                    href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${selectedImage.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${selectedImage.id}\n\nPlease provide more details.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-green-500 text-white font-black py-3.5 rounded-xl flex items-center justify-center gap-3 hover:bg-green-600 transition-all shadow-lg active:scale-95 text-sm"

@@ -40,7 +40,7 @@ const CustomerLogin = () => {
         {/* Left Panel */}
         <div className="bg-blue-600 text-white p-10 md:w-2/5 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold mb-4">{isLogin ? 'Customer Login' : 'Join Rajalaxmi Steel'}</h2>
+            <h2 className="text-3xl font-bold mb-4">{isLogin ? 'Customer Login' : 'Join Rajlaxmi Metal Works'}</h2>
             <p className="text-blue-100 text-lg">
               {isLogin 
                 ? 'Get access to your Orders, Wishlist and Recommendations' 
@@ -129,7 +129,7 @@ const CustomerLogin = () => {
                 onClick={() => setIsLogin(!isLogin)}
                 className="text-blue-600 font-bold hover:underline"
               >
-                {isLogin ? 'New to Rajalaxmi? Create an account' : 'Existing User? Log in'}
+                {isLogin ? 'New to Rajlaxmi? Create an account' : 'Existing User? Log in'}
               </button>
             </div>
             
