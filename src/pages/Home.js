@@ -473,7 +473,7 @@ const Home = () => {
           {/* Left Side - Image */}
           <div className="w-full lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl h-[400px] sm:h-[550px] group bg-blue-900 flex items-center justify-center">
             <img 
-              src="/owner.jpeg" 
+              src={process.env.PUBLIC_URL + "/owner.jpeg"} 
               alt={`Shrikanth Irappanavar - ${t('about_owner_ceo')}`} 
               className="absolute inset-0 w-full h-full object-cover object-center scale-[1.35] hover:scale-[1.45] transition-transform duration-700"
               onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=800'; }}
