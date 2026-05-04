@@ -74,8 +74,8 @@ const Navbar = () => {
   };
 
   const startListening = () => {
-    if (isListening && recognitionRef.current) {
-      recognitionRef.current.stop();
+    if (isListening) {
+      if (recognitionRef.current) recognitionRef.current.stop();
       setIsListening(false);
       return;
     }
@@ -132,8 +132,7 @@ const Navbar = () => {
       }
     };
 
-    recognition.onerror = (event) => {
-      console.error('Speech recognition error', event.error);
+    recognition.onerror = () => {
       setIsListening(false);
     };
 
@@ -160,6 +159,20 @@ const Navbar = () => {
           {/* Search Bar Container - Hidden on small mobile, shown on md+ */}
           <div className="hidden sm:block flex-1 max-w-xl relative" ref={suggestionRef}>
             <form onSubmit={handleSearch} className="relative group">
+              {isListening && (
+                <div className="absolute -top-10 left-0 right-0 flex justify-center animate-in slide-in-from-bottom-2 fade-in duration-300">
+                  <div className="bg-blue-600 text-white px-4 py-1.5 rounded-full shadow-lg flex items-center gap-3 border border-blue-400">
+                    <div className="flex gap-1">
+                      <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-bounce"></span>
+                      <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                      <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+                      {transcript || "Listening..."}
+                    </span>
+                  </div>
+                </div>
+              )}
               <input
                 type="text"
                 placeholder={t('nav_search')}
@@ -170,7 +183,7 @@ const Navbar = () => {
               <button 
                 type="button" 
                 onClick={startListening}
-                className={`absolute right-10 top-2 ${isListening ? 'text-red-500 animate-pulse' : 'text-gray-400 hover:text-blue-600'}`}
+                className={`absolute right-10 top-2 transition-all ${isListening ? 'text-red-500 scale-125' : 'text-gray-400 hover:text-blue-600'}`}
                 title="Voice Search"
               >
                 <Mic size={18} />
@@ -337,54 +350,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* Voice Search Overlay */}
-      {isListening && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-blue-900/95 backdrop-blur-xl transition-all duration-500">
-          <div className="max-w-2xl w-full px-6 text-center">
-            <div className="mb-12 relative">
-              <div className="absolute inset-0 bg-yellow-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-              <div className="relative bg-white/10 p-8 rounded-full border border-white/20 inline-block">
-                <Mic size={64} className="text-yellow-400 animate-bounce" />
-              </div>
-            </div>
-            
-            <h2 className="text-4xl font-black mb-4 tracking-tight uppercase italic text-white">Listening...</h2>
-            <p className="text-blue-200 text-xl font-medium mb-12 min-h-[1.5em] italic">
-              {transcript || "Speak now to search our services..."}
-            </p>
-            
-            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8">
-              <p className="text-blue-300 text-xs font-black uppercase tracking-[0.3em] mb-6">Suggestions</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {['MS Gate', 'Steel Reeling', '3D Name Plate', 'Generator', 'Bike Trolley', 'Rolling Shutter'].map(suggestion => (
-                  <button 
-                    key={suggestion}
-                    onClick={() => {
-                      setSearchTerm(suggestion);
-                      setSearchQuery(suggestion);
-                      setIsListening(false);
-                      if (recognitionRef.current) recognitionRef.current.stop();
-                    }}
-                    className="bg-white/10 hover:bg-yellow-400 hover:text-blue-900 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all border border-white/10"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            <button 
-              onClick={() => {
-                setIsListening(false);
-                if (recognitionRef.current) recognitionRef.current.stop();
-              }}
-              className="mt-12 text-white/50 hover:text-white flex items-center gap-2 mx-auto font-bold uppercase tracking-widest text-xs transition-colors"
-            >
-              <X size={20} /> Cancel Search
-            </button>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
