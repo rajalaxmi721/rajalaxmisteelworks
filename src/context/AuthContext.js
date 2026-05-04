@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     setUser(newUser);
     
     // Redirect to WhatsApp on interest
-    const message = `Hi Rajlaxmi Metal Works, I am interested in your services. My name is ${userData.name}.`;
+    const message = `Hi Rajlaxmi Steel Works, I am interested in your services. My name is ${userData.name}.`;
     window.open(`https://wa.me/917349760721?text=${encodeURIComponent(message)}`, '_blank');
     
     return { success: true };

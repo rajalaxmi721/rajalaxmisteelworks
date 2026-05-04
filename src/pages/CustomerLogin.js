@@ -40,7 +40,7 @@ const CustomerLogin = () => {
         {/* Left Panel */}
         <div className="bg-blue-600 text-white p-10 md:w-2/5 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold mb-4">{isLogin ? 'Customer Login' : 'Join Rajlaxmi Metal Works'}</h2>
+            <h2 className="text-3xl font-bold mb-4">{isLogin ? 'Customer Login' : 'Join Rajlaxmi Steel Works'}</h2>
             <p className="text-blue-100 text-lg">
               {isLogin 
                 ? 'Get access to your Orders, Wishlist and Recommendations' 

@@ -7,6 +7,25 @@ import { useSearch } from '../context/SearchContext';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
+
 const Home = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -367,7 +386,7 @@ const Home = () => {
                     
                     <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
                       <a 
-                        href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${visibleProducts[0].name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${visibleProducts[0].id}\n\nPlease provide more details.`)}`}
+                        href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Steel Works, I am interested in: ${visibleProducts[0].name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${visibleProducts[0].id}\n\nPlease provide more details.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:from-white hover:to-white hover:text-green-600 hover:scale-105 transition-all shadow-[0_10px_20px_rgba(34,197,94,0.3)] active:scale-95 text-sm"
@@ -465,7 +484,7 @@ const Home = () => {
                         
                         <div className="mt-auto">
                           <a 
-                            href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${product.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${product.id}\n\nPlease provide more details.`)}`}
+                            href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Steel Works, I am interested in: ${product.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${product.id}\n\nPlease provide more details.`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full bg-gradient-to-r from-blue-900 to-blue-800 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:from-yellow-400 hover:to-yellow-500 hover:text-blue-900 transition-all shadow-lg active:scale-95 hover:scale-[1.02]"
@@ -614,7 +633,7 @@ const Home = () => {
           {/* Right Side - Google Map */}
           <div className="lg:w-1/2 h-80 lg:h-auto min-h-[400px] relative bg-gray-800">
             <iframe 
-              title="Rajlaxmi Metal Works Location"
+              title="Rajlaxmi Steel Works Location"
               src="https://maps.google.com/maps?q=16.336995,74.9617633&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               className="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-pointer"
               allowFullScreen="" 
@@ -624,6 +643,33 @@ const Home = () => {
             {/* Inner shadow overlay for the map to blend it perfectly with the rounded container */}
             <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(30,58,138,0.5)]"></div>
           </div>
+        </div>
+      </section>
+
+      {/* Instagram Connect Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl border border-gray-100 flex flex-col items-center text-center">
+          <div className="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-6 rounded-[2rem] text-white mb-8 shadow-xl transform hover:scale-110 transition-transform">
+            <InstagramIcon size={64} />
+          </div>
+          <h2 className="text-4xl font-black text-blue-900 mb-6 uppercase tracking-tight italic">
+            See Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ee2a7b] to-[#6228d7]">3D Mastery</span>
+          </h2>
+          <p className="text-gray-500 text-xl max-w-2xl mb-10 leading-relaxed">
+            Follow us on Instagram for daily updates on our steel fabrication projects, custom 3D printed name plates, and industrial machinery in action.
+          </p>
+          <a 
+            href="https://www.instagram.com/rajlaxmi_3d_designing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-4 bg-blue-900 text-white px-12 py-5 rounded-2xl font-black text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span className="relative flex items-center gap-3">
+              <InstagramIcon size={24} />
+              FOLLOW @RAJLAXMI_3D_DESIGNING
+            </span>
+          </a>
         </div>
       </section>
 
@@ -669,7 +715,7 @@ const Home = () => {
                     <span className="text-gray-400 text-xs font-semibold">({selectedImage.reviews} reviews)</span>
                  </div>
                  <a 
-                    href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Metal Works, I am interested in: ${selectedImage.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${selectedImage.id}\n\nPlease provide more details.`)}`}
+                    href={`https://wa.me/917349760721?text=${encodeURIComponent(`Hi Rajlaxmi Steel Works, I am interested in: ${selectedImage.name}.\n\nProduct Link: ${window.location.href.split('#')[0]}#product-${selectedImage.id}\n\nPlease provide more details.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-green-500 text-white font-black py-3.5 rounded-xl flex items-center justify-center gap-3 hover:bg-green-600 transition-all shadow-lg active:scale-95 text-sm"

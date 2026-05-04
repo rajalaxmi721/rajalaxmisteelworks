@@ -127,7 +127,7 @@ export const mockProducts = [
     category: "Generator rent",
     rating: 4.7,
     reviews: 31,
-    image: "/generator1.jfif",
+    image: "/generator.jfif",
     description: "Portable Generator for Rent – Reliable Power Anytime, Anywhere\n\nOur portable generator is a powerful and efficient solution for all your temporary power needs. Designed with a compact and soundproof structure, it delivers stable electricity while maintaining low noise levels, making it ideal for both urban and remote locations.\n\n⚡ Key Features\n- High Performance: Provides consistent and reliable power for various applications\n- Portable & Compact: Easy to transport and install at any site\n- Low Noise Operation: Silent canopy design ensures minimal disturbance\n- Fuel Efficient: Optimized diesel consumption for longer operation hours\n- Safe & Durable: Built with strong materials for long-term usage\n\n🏗️ Applications\n- Construction sites and road projects\n- Outdoor events, functions, and exhibitions\n- Emergency power backup for homes and offices\n- Industrial and commercial operations\n- Remote area power supply\n\n✅ Why Choose Our Generator Rental?\n- Affordable rental plans\n- Well-maintained and ready-to-use machines\n- Quick delivery and setup support\n- Reliable performance even in tough conditions\n\nWhether you need power for a short-term project or emergency backup, our portable generator ensures uninterrupted performance and peace of mind."
   },
   { id: 10, name: "3D Name Plate - Design 1", price: 1200, originalPrice: 1800, category: "3D name plates", rating: 5.0, reviews: 56, image: "/3dnameplates/1.jpeg", description: "Elegant 3D design name plates with premium finish." },

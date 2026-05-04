@@ -95,7 +95,7 @@ const AdminDashboard = () => {
                         <Phone size={18} />
                       </a>
                       <a 
-                        href={`https://wa.me/${u.phone}?text=Hi ${u.name}, I'm calling from Rajlaxmi Metal Works regarding your enquiry.`} 
+                        href={`https://wa.me/${u.phone}?text=Hi ${u.name}, I'm calling from Rajlaxmi Steel Works regarding your enquiry.`} 
                         target="_blank"
                         rel="noreferrer"
                         className="bg-blue-100 text-blue-700 p-2 rounded-full hover:bg-blue-200"

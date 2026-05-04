@@ -27,7 +27,7 @@ const AdminLogin = () => {
       <div className="max-w-md w-full bg-white shadow-2xl rounded-lg p-10">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-slate-800">Admin Portal</h2>
-          <p className="text-slate-500 mt-2">Rajlaxmi Metal Works & 3D Printing</p>
+          <p className="text-slate-500 mt-2">Rajlaxmi Steel Works & 3D Printing</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

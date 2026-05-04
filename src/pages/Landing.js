@@ -2,6 +2,25 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, ShieldCheck, Zap, Award, Phone, Mail, MapPin, User } from 'lucide-react';
 
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
+
 const Landing = () => {
   const navigate = useNavigate();
 
@@ -49,10 +68,10 @@ const Landing = () => {
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 relative z-10">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-black text-blue-950 mb-6 leading-tight">
-              Precision <span className="text-blue-600">Metal Works</span> & Industrial Excellence
+              Precision <span className="text-blue-600">Steel Works</span> & Industrial Excellence
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
-              At Rajlaxmi Metal Works & Services, we specialize in high-grade welding, precision fabrication, and heavy-duty industrial equipment. Quality you can trust, durability you can see.
+              At Rajlaxmi Steel Works & Services, we specialize in high-grade welding, precision fabrication, and heavy-duty industrial equipment. Quality you can trust, durability you can see.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
@@ -87,9 +106,9 @@ const Landing = () => {
       <section id="about" className="py-24 bg-white border-y border-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-blue-950 mb-4">About Rajlaxmi Metal Works</h2>
+            <h2 className="text-4xl font-bold text-blue-950 mb-4">About Rajlaxmi Steel Works</h2>
             <p className="text-slate-500 text-lg">
-              Since our inception, Rajlaxmi Metal Works & Services has been at the forefront of the steel industry. We don't just weld; we build the future with strength and precision. Our workshop is equipped with the latest technology to deliver custom solutions for every scale.
+              Since our inception, Rajlaxmi Steel Works & Services has been at the forefront of the steel industry. We don't just weld; we build the future with strength and precision. Our workshop is equipped with the latest technology to deliver custom solutions for every scale.
             </p>
           </div>
           
@@ -199,9 +218,32 @@ const Landing = () => {
         </div>
       </section>
 
+      {/* Social Media Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 text-center">
+          <div className="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-[2px] rounded-[3rem] inline-block mb-8 shadow-2xl">
+            <div className="bg-white rounded-[3rem] px-6 py-10 md:px-12 flex flex-col items-center">
+              <div className="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-5 rounded-3xl text-white mb-6 shadow-lg transform hover:rotate-12 transition-transform">
+                <InstagramIcon size={48} />
+              </div>
+              <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">Follow Our 3D Design Journey</h2>
+              <p className="text-slate-500 mb-8 max-w-md">Get exclusive looks at our latest 3D printing projects, name plates, and industrial steel works on Instagram.</p>
+              <a 
+                href="https://www.instagram.com/rajlaxmi_3d_designing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white px-10 py-4 rounded-full font-black text-lg shadow-xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
+              >
+                @rajlaxmi_3d_designing
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 bg-blue-950 text-white text-center">
-        <p className="text-blue-200 text-sm">© 2026 Rajlaxmi Metal Works & Services. Building Strength for Tomorrow.</p>
+        <p className="text-blue-200 text-sm">© 2026 Rajlaxmi Steel Works & Services. Building Strength for Tomorrow.</p>
       </footer>
     </div>
   );
