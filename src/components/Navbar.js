@@ -16,6 +16,8 @@ const Navbar = () => {
   const [showServices, setShowServices] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [transcript, setTranscript] = useState('');
+  const recognitionRef = useRef(null);
   const suggestionRef = useRef(null);
 
   const categories = [
@@ -72,6 +74,12 @@ const Navbar = () => {
   };
 
   const startListening = () => {
+    if (isListening && recognitionRef.current) {
+      recognitionRef.current.stop();
+      setIsListening(false);
+      return;
+    }
+
     if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
       alert("Your browser does not support voice search.");
       return;
@@ -79,13 +87,15 @@ const Navbar = () => {
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
+    recognitionRef.current = recognition;
 
     recognition.continuous = true;
     recognition.interimResults = true;
-    recognition.lang = 'en-IN'; // Indian English for better local accent recognition
+    recognition.lang = 'en-IN';
 
     recognition.onstart = () => {
       setIsListening(true);
+      setTranscript('');
     };
 
     recognition.onresult = (event) => {
@@ -101,24 +111,23 @@ const Navbar = () => {
       }
       
       const currentText = finalTranscript || interimTranscript;
+      setTranscript(currentText);
       setSearchTerm(currentText);
       
-      // Show live suggestions while speaking
       if (currentText.trim().length > 1) {
         const filtered = mockProducts
           .filter(p => p.name.toLowerCase().includes(currentText.toLowerCase()))
           .slice(0, 5);
         setSuggestions(filtered);
         setShowSuggestions(true);
-      } else {
-        setShowSuggestions(false);
       }
 
-      // Execute search when speech is final
       if (finalTranscript) {
         setSearchQuery(finalTranscript);
-        setShowSuggestions(false);
-        setIsMobileMenuOpen(false);
+        setTimeout(() => {
+          setIsListening(false);
+          setShowSuggestions(false);
+        }, 1500);
         recognition.stop();
       }
     };
@@ -328,6 +337,54 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* Voice Search Overlay */}
+      {isListening && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-blue-900/95 backdrop-blur-xl transition-all duration-500">
+          <div className="max-w-2xl w-full px-6 text-center">
+            <div className="mb-12 relative">
+              <div className="absolute inset-0 bg-yellow-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              <div className="relative bg-white/10 p-8 rounded-full border border-white/20 inline-block">
+                <Mic size={64} className="text-yellow-400 animate-bounce" />
+              </div>
+            </div>
+            
+            <h2 className="text-4xl font-black mb-4 tracking-tight uppercase italic text-white">Listening...</h2>
+            <p className="text-blue-200 text-xl font-medium mb-12 min-h-[1.5em] italic">
+              {transcript || "Speak now to search our services..."}
+            </p>
+            
+            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8">
+              <p className="text-blue-300 text-xs font-black uppercase tracking-[0.3em] mb-6">Suggestions</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {['MS Gate', 'Steel Reeling', '3D Name Plate', 'Generator', 'Bike Trolley', 'Rolling Shutter'].map(suggestion => (
+                  <button 
+                    key={suggestion}
+                    onClick={() => {
+                      setSearchTerm(suggestion);
+                      setSearchQuery(suggestion);
+                      setIsListening(false);
+                      if (recognitionRef.current) recognitionRef.current.stop();
+                    }}
+                    className="bg-white/10 hover:bg-yellow-400 hover:text-blue-900 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all border border-white/10"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <button 
+              onClick={() => {
+                setIsListening(false);
+                if (recognitionRef.current) recognitionRef.current.stop();
+              }}
+              className="mt-12 text-white/50 hover:text-white flex items-center gap-2 mx-auto font-bold uppercase tracking-widest text-xs transition-colors"
+            >
+              <X size={20} /> Cancel Search
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
