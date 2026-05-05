@@ -659,7 +659,7 @@ const Home = () => {
             Follow us on Instagram for daily updates on our steel fabrication projects, custom 3D printed name plates, and industrial machinery in action.
           </p>
           <a 
-            href="https://www.instagram.com/rajlaxmi_3d_designing" 
+            href="https://www.instagram.com/rajlaxmi_3d_name_and_designing/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-4 bg-blue-900 text-white px-12 py-5 rounded-2xl font-black text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
@@ -667,7 +667,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <span className="relative flex items-center gap-3">
               <InstagramIcon size={24} />
-              FOLLOW @RAJLAXMI_3D_DESIGNING
+              FOLLOW @RAJLAXMI_3D_NAME_AND_DESIGNING
             </span>
           </a>
         </div>

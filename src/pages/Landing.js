@@ -229,12 +229,12 @@ const Landing = () => {
               <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">Follow Our 3D Design Journey</h2>
               <p className="text-slate-500 mb-8 max-w-md">Get exclusive looks at our latest 3D printing projects, name plates, and industrial steel works on Instagram.</p>
               <a 
-                href="https://www.instagram.com/rajlaxmi_3d_designing" 
+                href="https://www.instagram.com/rajlaxmi_3d_name_and_designing/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white px-10 py-4 rounded-full font-black text-lg shadow-xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
               >
-                @rajlaxmi_3d_designing
+                @rajlaxmi_3d_name_and_designing
               </a>
             </div>
           </div>
