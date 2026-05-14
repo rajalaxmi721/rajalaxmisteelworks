@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rajalaxmisteelworks/static/css/main.62b3ec7b.css",
+    "main.js": "/rajalaxmisteelworks/static/js/main.c3838397.js",
+    "static/js/453.51520cae.chunk.js": "/rajalaxmisteelworks/static/js/453.51520cae.chunk.js",
+    "index.html": "/rajalaxmisteelworks/index.html",
+    "main.62b3ec7b.css.map": "/rajalaxmisteelworks/static/css/main.62b3ec7b.css.map",
+    "main.c3838397.js.map": "/rajalaxmisteelworks/static/js/main.c3838397.js.map",
+    "453.51520cae.chunk.js.map": "/rajalaxmisteelworks/static/js/453.51520cae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62b3ec7b.css",
+    "static/js/main.c3838397.js"
+  ]
+}
